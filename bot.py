@@ -43,7 +43,7 @@ BOT_TOKEN = "8683877270:AAE92_iTUBdNst5TVPCGaKseajql4buOURo"
 # Example: ADMINS = ["Sahil_sciastra", "newadmin123"]
 ADMINS = [
     "Sahil_sciastra",    # Main admin — tagged by /guide
-    "Evyavansachan",    # Remove the # at the start to activate
+    "Evyavansachan",     # Remove the # at the start to activate
 ]
 
 # Main admin is always the first one in the list
