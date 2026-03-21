@@ -44,7 +44,7 @@ BOT_TOKEN = "8683877270:AAE92_iTUBdNst5TVPCGaKseajql4buOURo"
 ADMINS = [
     "Sahil_sciastra",    # Main admin — tagged by /guide
     "Evyavansachan",
-    "jester_here", # Remove the # at the start to activate
+    "jester_here",
 ]
 
 # Main admin is always the first one in the list
@@ -125,6 +125,7 @@ Welcome to SciAstra Telegram Bot! 👋
 
 Here's what I can help you with:
 
+/start       - See everything the bot can do
 /schedule    - This week's class timetable
 /planning    - How to plan your study schedule
 /strategy    - Exam strategy and time management
@@ -367,8 +368,8 @@ async def filter_bad_words(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.message.from_user
     uname = user.username or user.first_name
 
-    # Check bad words
-    found_words = [word for word in BAD_WORDS if word in text]
+    # Check bad words — whole word match only so "obc" does not trigger "bc"
+    found_words = [word for word in BAD_WORDS if re.search(r'\b' + re.escape(word) + r'\b', text)]
     if found_words:
         try:
             await update.message.delete()
