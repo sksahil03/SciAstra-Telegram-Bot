@@ -234,6 +234,7 @@ For IAT/NEST - what is enough?
 - NCERT is the foundation - read every line, every example
 - SciAstra material provided in class is sufficient
 - Do not keep buying new books - depth over breadth
+- You can prefer SciAstra books too.
 
 Revision strategy (last 2 weeks):
 - Week 1: Topic-wise revision + solve past year questions
