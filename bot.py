@@ -120,7 +120,7 @@ SUSPICIOUS_PATTERNS = [
 
 # Welcome message
 WELCOME_MESSAGE = """
-Welcome to SciAstra Coaching Bot! 👋
+Welcome to SciAstra Telegram Bot! 👋
 
 Here's what I can help you with:
 
@@ -261,7 +261,7 @@ IAT (IISER Aptitude Test):
 
 NEST (National Entrance Screening Test):
 - For admission to NISER Bhubaneswar and CEBS Mumbai
-- Cutoff: Top 200-300 ranks for NISER
+- Cutoff: Top 300-400 ranks for NISER
 - Integrated MSc: 5 years, great for research careers
 
 Which is better - IAT or NEST?
