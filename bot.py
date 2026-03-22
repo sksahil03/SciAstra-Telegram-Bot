@@ -54,25 +54,6 @@ MAIN_ADMIN = ADMINS[0]
 def tag_all_admins():
     return " ".join(f"@{a}" for a in ADMINS)
 
-# Path to schedule image (must be in same folder as bot.py)
-SCHEDULE_IMAGE = "schedule.png"
-
-# Fallback text if image not found
-SCHEDULE_TEXT = """
-Week 2 - IAT/NEST Crash Course 2026
-16th March - 21st March | Mon-Sat | 10:00 AM - 3:00 PM
-
-Day        | 10:00-11:30 | 11:45-1:15 | 1:30-3:00
-Monday     | Biology     | Chemistry  | Physics
-Tuesday    | Maths       | Chemistry  | Biology
-Wednesday  | Physics     | Chemistry  | Maths
-Thursday   | Biology     | Chemistry  | Physics
-Friday     | Chemistry   | Biology    | Maths
-Saturday   | Maths       | Biology    | Physics
-
-Total: Bio x5 | Chem x5 | Phy x4 | Maths x4 = 18 classes
-"""
-
 # Bad words list (add more anytime, keep lowercase)
 BAD_WORDS = [
     "fuck", "shit", "bastard", "bitch", "asshole", "dick", "pussy",
@@ -296,14 +277,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def schedule(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if os.path.exists(SCHEDULE_IMAGE):
-        with open(SCHEDULE_IMAGE, "rb") as photo:
-            await update.message.reply_photo(
-                photo=photo,
-                caption="This week's class schedule - SciAstra IAT/NEST Crash Course 2026"
-            )
-    else:
-        await update.message.reply_text(SCHEDULE_TEXT)
+    await update.message.reply_text(
+        "The schedule will be available soon. Stay tuned!"
+    )
 
 
 async def guide(update: Update, context: ContextTypes.DEFAULT_TYPE):
